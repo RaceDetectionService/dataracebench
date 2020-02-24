@@ -54,6 +54,7 @@ LOGFILE="$LOG_DIR/dataracecheck.log"
 
 MEMCHECK=${MEMCHECK:-"/usr/bin/time"}
 TIMEOUTCMD=${TIMEOUTCMD:-"timeout"}
+
 VALGRIND=${VALGRIND:-"valgrind"}
 VALGRIND_COMPILE_C_FLAGS="-g -std=c99 -fopenmp"
 VALGRIND_COMPILE_CPP_FLAGS="-g -fopenmp"
@@ -167,8 +168,8 @@ else
 fi
 
 if [[ ! ${#THREADLIST[@]} -gt 0 ]]; then
-  echo "Default thread counts will be used: 3, 36, 45, 72, 90, 180, 256."
-  THREADLIST=('3' '36' '45' '72' '90' '180' '256')
+  echo "Default thread counts will be used: 2, 4, 8."
+  THREADLIST=('2' '4' '8')
 else
   echo "Thread counts: ${THREADLIST[*]}";
 fi

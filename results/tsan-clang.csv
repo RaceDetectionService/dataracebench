@@ -1,0 +1,31 @@
+tool,id,filename,haverace,threads,dataset,races,elapsed-time(seconds),used-mem(KBs),compile-return,runtime-return
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,2,N/A,1,.114,Command exited with non-zero status 66
+18012,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,2,N/A,1,.126,Command exited with non-zero status 66
+18068,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,2,N/A,1,.106,Command exited with non-zero status 66
+18024,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,2,N/A,1,.114,Command exited with non-zero status 66
+18048,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,2,N/A,1,.116,Command exited with non-zero status 66
+18020,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,4,N/A,3,.115,Command exited with non-zero status 66
+19452,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,4,N/A,4,.120,Command exited with non-zero status 66
+19452,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,4,N/A,4,.089,Command exited with non-zero status 66
+19452,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,4,N/A,3,.111,Command exited with non-zero status 66
+19424,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,4,N/A,4,.122,Command exited with non-zero status 66
+19504,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,8,N/A,7,.138,Command exited with non-zero status 66
+21768,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,8,N/A,7,.144,Command exited with non-zero status 66
+21832,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,8,N/A,7,.136,Command exited with non-zero status 66
+21704,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,8,N/A,7,.136,Command exited with non-zero status 66
+21780,0,0
+tsan-clang,001,"DRB001-antidep1-orig-yes.c",true,8,N/A,7,.140,Command exited with non-zero status 66
+21876,0,0

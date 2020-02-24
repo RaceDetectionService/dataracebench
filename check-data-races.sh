@@ -62,6 +62,8 @@ if [[ -z "$OPTION" || "$OPTION" == "--help" ]]; then
     echo "--tsan-gcc  : compile and test all benchmarks with gcc ThreadSanitizer"
     echo "--archer    : compile and test all benchmarks with Archer"
     echo "--inspector : compile and test all benchmarks with Intel Inspector"
+    echo "--romp      : compile and test all benchmarks with Romp"
+    echo "--newbench  : compile and test all benchmarks with Archer Inspector Tsan Romp with 2,4,8 threads"
     echo
     exit
 fi
@@ -142,4 +144,11 @@ fi
 
 if [[ "$OPTION" == "--romp" ]]; then
    scripts/test-harness.sh -x romp
+fi
+
+if [[ "$OPTION" == "--newbench" ]]; then
+   scripts/test-harness.sh  -x archer
+   scripts/test-harness.sh  -x tsan-clang
+   scripts/test-harness.sh  -x inspector-max-resources
+   scripts/test-harness.sh  -x romp
 fi

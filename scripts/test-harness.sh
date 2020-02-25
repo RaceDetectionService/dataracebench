@@ -78,6 +78,8 @@ VARLEN_PATTERN='[[:alnum:]]+-var-[[:alnum:]]+\.c'
 RACES_PATTERN='[[:alnum:]]+-[[:alnum:]]+-yes\.c'
 CPP_PATTERN='[[:alnum:]]+\.cpp'
 
+PARSERTOOL="python3"
+
 usage () {
   echo
   echo "Usage: $0 [--help] [OPTIONS]"
@@ -218,7 +220,7 @@ cleanup () {
             if [[ $SIZE_INDEX -eq 0 && $ITER -eq 1 ]]; then
               echo "$tool,\"$test\",$thread,all,$ITERATIONS" >> "$LOGFILE"
             else
-              for size in "${SIZES[@]:$SIZE_INDEX}"; do
+              for size in "${DATASET_SIZES[@]:$SIZE_INDEX}"; do
                 if [[ $ITER -eq 1 ]]; then echo "$tool,\"$test\",$thread,${size:-"N/A"},$ITERATIONS" >> "$LOGFILE"
                 else echo "$tool,\"$test\",$thread,all,$((ITERATIONS - ITER + 1))" >> "$LOGFILE"; ITER=1; fi
               done
@@ -251,7 +253,7 @@ for tool in "${TOOLS[@]}"; do
       tool='inspector'
       ;;
     'inspector')
-      runtime_flags+=" -collect ti2"
+      runtime_flags+=" -collect ti3"
       ;;
   esac
 
@@ -269,7 +271,9 @@ for tool in "${TOOLS[@]}"; do
     exname="$EXEC_DIR/$(basename "$test").$tool.out"
     rompexec="$exname.inst"
     logname="$(basename "$test").$tool.log"
+    parsername="$(basename "$test").$tool.parser.log"
     if [[ -e "$LOG_DIR/$logname" ]]; then rm "$LOG_DIR/$logname"; fi
+    if [[ -e "$LOG_DIR/$parsername" ]]; then rm "$LOG_DIR/$parsername"; fi
     if grep -q 'PolyBench' "$test"; then additional_compile_flags+=" $POLYFLAG"; fi
 
     if [[ "$test" =~ $CPP_PATTERN ]]; then
@@ -310,7 +314,7 @@ for tool in "${TOOLS[@]}"; do
       echo "Testing $test: with $thread threads"
       export OMP_NUM_THREADS=$thread 
       SIZE_INDEX=0
-      for size in "${SIZES[@]}"; do
+      for size in "${DATASET_SIZES[@]}"; do
         # Sanity check
         if [[ ! -e "$exname" ]]; then
           echo "$tool,$id,\"$testname\",$haverace,$thread,${size:-"N/A"},,,,$compilereturn," >> "$file";
@@ -348,14 +352,20 @@ for tool in "${TOOLS[@]}"; do
                 $TIMEOUTCMD $TIMEOUTMIN"m" $MEMCHECK -f "%M" -o "$MEMLOG" "./$exname" $size &> tmp.log;
                 check_return_code $?;
 		echo "testname return $testreturn"
-                races=$(grep -ce 'WARNING: ThreadSanitizer: data race' tmp.log) 
+		$PARSERTOOL ./parser/ArchoutputParser.py tmp.log >> "$LOG_DIR/$parsername" >"$LOG_DIR/tmp.log"
+		$PARSERTOOL count.py "$LOG_DIR/tmp.log" >"$LOG_DIR/tmp1.log"
+		races=$(cat "$LOG_DIR/tmp1.log")
+#                races=$(grep -ce 'WARNING: ThreadSanitizer: data race' tmp.log) 
                 cat tmp.log >> "$LOG_DIR/$logname" || >tmp.log ;;
               tsan-clang)
 #                races=$($MEMCHECK -f "%M" -o "$MEMLOG" "./$exname" $size 2>&1 | tee -a "$LOG_DIR/$logname" | grep -ce 'WARNING: ThreadSanitizer: data race') ;;
                 $TIMEOUTCMD $TIMEOUTMIN"m" $MEMCHECK -f "%M" -o "$MEMLOG" "./$exname" $size &> tmp.log;
                 check_return_code $?;
 		echo "testname return $testreturn"
-                races=$(grep -ce 'WARNING: ThreadSanitizer: data race' tmp.log) 
+		$PARSERTOOL ./parser/TsanoutputParser.py tmp.log >> "$LOG_DIR/$parsername" >"$LOG_DIR/tmp.log"
+		$PARSERTOOL count.py "$LOG_DIR/tmp.log" >"$LOG_DIR/tmp1.log"
+		races=$(cat "$LOG_DIR/tmp1.log")
+#                races=$(grep -ce 'WARNING: ThreadSanitizer: data race' tmp.log) 
                 cat tmp.log >> "$LOG_DIR/$logname" || >tmp.log ;;
               tsan-gcc)
 #                races=$($MEMCHECK -f "%M" -o "$MEMLOG" "./$exname" $size 2>&1 | tee -a "$LOG_DIR/$logname" | grep -ce 'WARNING: ThreadSanitizer: data race') ;;
@@ -375,7 +385,10 @@ for tool in "${TOOLS[@]}"; do
                 $TIMEOUTCMD $TIMEOUTMIN"m" $MEMCHECK -f "%M" -o "$MEMLOG" "./$rompexec" $size &> tmp.log;
                 check_return_code $?;
 		echo "testname return $testreturn"
-                races=$(grep -ce 'data race found:' tmp.log) 
+		$PARSERTOOL ./parser/RompoutputParser.py tmp.log >> "$LOG_DIR/$parsername" >"$LOG_DIR/tmp.log"
+		$PARSERTOOL count.py "$LOG_DIR/tmp.log" >"$LOG_DIR/tmp1.log"
+		races=$(cat "$LOG_DIR/tmp1.log")
+#                races=$(grep -ce 'data race found:' tmp.log) 
                 cat tmp.log >> "$LOG_DIR/$logname" || >tmp.log ;;
                 #races=$("./$exname" $size 2>&1 | tee -a "$LOG_DIR/$logname" | grep -ce 'race found!') ;;
             esac

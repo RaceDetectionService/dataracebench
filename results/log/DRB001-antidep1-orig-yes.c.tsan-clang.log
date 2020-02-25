@@ -1,23 +1,23 @@
-*****     Log 1 for DRB001-antidep1-orig-yes.c with 2 threads and input size      *****
+*****     Log 1 for DRB001-antidep1-orig-yes.c with 2 threads and input size 32     *****
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=718)
-  Read of size 4 at 0x7fff3b4e7280 by main thread:
+WARNING: ThreadSanitizer: data race (pid=15976)
+  Read of size 4 at 0x7fff945d6a60 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
     #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Previous write of size 4 at 0x7fff3b4e7280 by thread T1:
+  Previous write of size 4 at 0x7fff945d6a60 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7fff3b4c9000 ([stack]+0x00000001e280)
+  Location is global '??' at 0x7fff945b8000 ([stack]+0x00000001ea60)
 
-  Thread T1 (tid=720, running) created by main thread at:
+  Thread T1 (tid=15978, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -26,26 +26,26 @@ SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/
 ==================
 ThreadSanitizer: reported 1 warnings
 a[500]=502
-*****     Log 2 for DRB001-antidep1-orig-yes.c with 2 threads and input size      *****
+*****     Log 2 for DRB001-antidep1-orig-yes.c with 2 threads and input size 32     *****
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=739)
-  Read of size 4 at 0x7ffeb41ab680 by main thread:
+WARNING: ThreadSanitizer: data race (pid=15992)
+  Read of size 4 at 0x7fff2352af50 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
     #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Previous write of size 4 at 0x7ffeb41ab680 by thread T1:
+  Previous write of size 4 at 0x7fff2352af50 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffeb418e000 ([stack]+0x00000001d680)
+  Location is global '??' at 0x7fff2350d000 ([stack]+0x00000001df50)
 
-  Thread T1 (tid=741, running) created by main thread at:
+  Thread T1 (tid=15994, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -54,16 +54,16 @@ SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/
 ==================
 ThreadSanitizer: reported 1 warnings
 a[500]=502
-*****     Log 3 for DRB001-antidep1-orig-yes.c with 2 threads and input size      *****
+*****     Log 3 for DRB001-antidep1-orig-yes.c with 2 threads and input size 32     *****
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=753)
-  Write of size 4 at 0x7ffccd0f44d0 by thread T1:
+WARNING: ThreadSanitizer: data race (pid=16008)
+  Write of size 4 at 0x7ffdd96aed20 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous read of size 4 at 0x7ffccd0f44d0 by main thread:
+  Previous read of size 4 at 0x7ffdd96aed20 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
@@ -71,9 +71,9 @@ WARNING: ThreadSanitizer: data race (pid=753)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffccd0d5000 ([stack]+0x00000001f4d0)
+  Location is global '??' at 0x7ffdd9691000 ([stack]+0x00000001dd20)
 
-  Thread T1 (tid=755, running) created by main thread at:
+  Thread T1 (tid=16010, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -82,16 +82,16 @@ SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/
 ==================
 ThreadSanitizer: reported 1 warnings
 a[500]=502
-*****     Log 4 for DRB001-antidep1-orig-yes.c with 2 threads and input size      *****
+*****     Log 4 for DRB001-antidep1-orig-yes.c with 2 threads and input size 32     *****
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=767)
-  Write of size 4 at 0x7fff0219f6a0 by thread T1:
+WARNING: ThreadSanitizer: data race (pid=16024)
+  Write of size 4 at 0x7ffc09bd2d10 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous read of size 4 at 0x7fff0219f6a0 by main thread:
+  Previous read of size 4 at 0x7ffc09bd2d10 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
@@ -99,9 +99,9 @@ WARNING: ThreadSanitizer: data race (pid=767)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7fff02181000 ([stack]+0x00000001e6a0)
+  Location is global '??' at 0x7ffc09bb4000 ([stack]+0x00000001ed10)
 
-  Thread T1 (tid=769, running) created by main thread at:
+  Thread T1 (tid=16026, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -110,37 +110,37 @@ SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/
 ==================
 ThreadSanitizer: reported 1 warnings
 a[500]=502
-*****     Log 5 for DRB001-antidep1-orig-yes.c with 2 threads and input size      *****
+*****     Log 5 for DRB001-antidep1-orig-yes.c with 2 threads and input size 32     *****
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=781)
-  Read of size 4 at 0x7ffe9581e450 by main thread:
+WARNING: ThreadSanitizer: data race (pid=16040)
+  Write of size 4 at 0x7fff9992c830 by thread T1:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous read of size 4 at 0x7fff9992c830 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
     #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Previous write of size 4 at 0x7ffe9581e450 by thread T1:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffe95800000 ([stack]+0x00000001e450)
+  Location is global '??' at 0x7fff9990e000 ([stack]+0x00000001e830)
 
-  Thread T1 (tid=783, running) created by main thread at:
+  Thread T1 (tid=16042, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
 ThreadSanitizer: reported 1 warnings
 a[500]=502
-*****     Log 1 for DRB001-antidep1-orig-yes.c with 4 threads and input size      *****
+*****     Log 1 for DRB001-antidep1-orig-yes.c with 4 threads and input size 32     *****
 ==================
-WARNING: ThreadSanitizer: data race (pid=799)
+WARNING: ThreadSanitizer: data race (pid=16060)
   Atomic read of size 1 at 0x7b6800001700 by main thread:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -155,7 +155,7 @@ WARNING: ThreadSanitizer: data race (pid=799)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T2 (tid=802, running) created by main thread at:
+  Thread T2 (tid=16063, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -164,27 +164,23 @@ SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739
 ==================
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=799)
-  Read of size 4 at 0x7fff7d99bd28 by thread T2:
+WARNING: ThreadSanitizer: data race (pid=16060)
+  Read of size 4 at 0x7ffdf9a36df8 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+    #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Previous write of size 4 at 0x7fff7d99bd28 by thread T3:
+  Previous write of size 4 at 0x7ffdf9a36df8 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7fff7d97e000 ([stack]+0x00000001dd28)
+  Location is global '??' at 0x7ffdf9a18000 ([stack]+0x00000001edf8)
 
-  Thread T2 (tid=802, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T3 (tid=803, running) created by main thread at:
+  Thread T1 (tid=16062, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -192,102 +188,27 @@ WARNING: ThreadSanitizer: data race (pid=799)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=799)
-  Write of size 4 at 0x7fff7d99b558 by thread T1:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous read of size 4 at 0x7fff7d99b558 by main thread:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-    #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7fff7d97e000 ([stack]+0x00000001d558)
-
-  Thread T1 (tid=801, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
-==================
-ThreadSanitizer: reported 3 warnings
-a[500]=502
-*****     Log 2 for DRB001-antidep1-orig-yes.c with 4 threads and input size      *****
-==================
-WARNING: ThreadSanitizer: data race (pid=815)
-  Atomic read of size 1 at 0x7b6800001700 by main thread:
-    #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
-    #1 <null> <null> (libomp.so.5+0x739be)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Previous write of size 1 at 0x7b6800001700 by thread T2:
-    #0 pthread_mutex_init /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:1211:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x441a33)
-    #1 <null> <null> (libomp.so.5+0x71661)
-
-  Location is heap block of size 1440 at 0x7b6800001200 allocated by main thread:
-    #0 malloc /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:666:5 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x43ee57)
-    #1 <null> <null> (libomp.so.5+0x1d4a1)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T2 (tid=818, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
-==================
-LLVMSymbolizer: error reading file: No such file or directory
-==================
-WARNING: ThreadSanitizer: data race (pid=815)
-  Write of size 4 at 0x7fffc366e668 by thread T1:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous read of size 4 at 0x7fffc366e668 by main thread:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-    #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7fffc3650000 ([stack]+0x00000001e668)
-
-  Thread T1 (tid=817, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=815)
-  Read of size 4 at 0x7fffc366ee38 by thread T2:
+WARNING: ThreadSanitizer: data race (pid=16060)
+  Read of size 4 at 0x7ffdf9a371e0 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7fffc366ee38 by thread T3:
+  Previous write of size 4 at 0x7ffdf9a371e0 by thread T2:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7fffc3650000 ([stack]+0x00000001ee38)
+  Location is global '??' at 0x7ffdf9a18000 ([stack]+0x00000001f1e0)
 
-  Thread T2 (tid=818, running) created by main thread at:
+  Thread T1 (tid=16062, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T3 (tid=819, running) created by main thread at:
+  Thread T2 (tid=16063, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -295,27 +216,27 @@ WARNING: ThreadSanitizer: data race (pid=815)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=815)
-  Read of size 4 at 0x7fffc366ea50 by thread T1:
+WARNING: ThreadSanitizer: data race (pid=16060)
+  Read of size 4 at 0x7ffdf9a375c8 by thread T2:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7fffc366ea50 by thread T2:
+  Previous write of size 4 at 0x7ffdf9a375c8 by thread T3:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7fffc3650000 ([stack]+0x00000001ea50)
+  Location is global '??' at 0x7ffdf9a18000 ([stack]+0x00000001f5c8)
 
-  Thread T1 (tid=817, running) created by main thread at:
+  Thread T2 (tid=16063, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T2 (tid=818, running) created by main thread at:
+  Thread T3 (tid=16064, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -324,9 +245,9 @@ SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/
 ==================
 ThreadSanitizer: reported 4 warnings
 a[500]=502
-*****     Log 3 for DRB001-antidep1-orig-yes.c with 4 threads and input size      *****
+*****     Log 2 for DRB001-antidep1-orig-yes.c with 4 threads and input size 32     *****
 ==================
-WARNING: ThreadSanitizer: data race (pid=831)
+WARNING: ThreadSanitizer: data race (pid=16078)
   Atomic read of size 1 at 0x7b6800001700 by main thread:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -341,7 +262,7 @@ WARNING: ThreadSanitizer: data race (pid=831)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T2 (tid=834, running) created by main thread at:
+  Thread T2 (tid=16081, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -350,51 +271,23 @@ SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739
 ==================
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=831)
-  Write of size 4 at 0x7ffc81556c58 by thread T1:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous read of size 4 at 0x7ffc81556c58 by main thread:
+WARNING: ThreadSanitizer: data race (pid=16078)
+  Read of size 4 at 0x7ffe8ae95658 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
     #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7ffc81538000 ([stack]+0x00000001ec58)
-
-  Thread T1 (tid=833, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=831)
-  Read of size 4 at 0x7ffc81557428 by thread T2:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous write of size 4 at 0x7ffc81557428 by thread T3:
+  Previous write of size 4 at 0x7ffe8ae95658 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffc81538000 ([stack]+0x00000001f428)
+  Location is global '??' at 0x7ffe8ae77000 ([stack]+0x00000001e658)
 
-  Thread T2 (tid=834, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T3 (tid=835, running) created by main thread at:
+  Thread T1 (tid=16080, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -402,27 +295,55 @@ WARNING: ThreadSanitizer: data race (pid=831)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=831)
-  Read of size 4 at 0x7ffc81557040 by thread T1:
+WARNING: ThreadSanitizer: data race (pid=16078)
+  Read of size 4 at 0x7ffe8ae95a40 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7ffc81557040 by thread T2:
+  Previous write of size 4 at 0x7ffe8ae95a40 by thread T2:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffc81538000 ([stack]+0x00000001f040)
+  Location is global '??' at 0x7ffe8ae77000 ([stack]+0x00000001ea40)
 
-  Thread T1 (tid=833, running) created by main thread at:
+  Thread T1 (tid=16080, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T2 (tid=834, running) created by main thread at:
+  Thread T2 (tid=16081, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16078)
+  Read of size 4 at 0x7ffe8ae95e28 by thread T2:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffe8ae95e28 by thread T3:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffe8ae77000 ([stack]+0x00000001ee28)
+
+  Thread T2 (tid=16081, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T3 (tid=16082, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -431,9 +352,9 @@ SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/
 ==================
 ThreadSanitizer: reported 4 warnings
 a[500]=502
-*****     Log 4 for DRB001-antidep1-orig-yes.c with 4 threads and input size      *****
+*****     Log 3 for DRB001-antidep1-orig-yes.c with 4 threads and input size 32     *****
 ==================
-WARNING: ThreadSanitizer: data race (pid=847)
+WARNING: ThreadSanitizer: data race (pid=16096)
   Atomic read of size 1 at 0x7b6800001700 by main thread:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -448,7 +369,7 @@ WARNING: ThreadSanitizer: data race (pid=847)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T2 (tid=850, running) created by main thread at:
+  Thread T2 (tid=16099, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -457,102 +378,23 @@ SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739
 ==================
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=847)
-  Read of size 4 at 0x7ffffab25a28 by thread T2:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous write of size 4 at 0x7ffffab25a28 by thread T3:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7ffffab07000 ([stack]+0x00000001ea28)
-
-  Thread T2 (tid=850, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T3 (tid=851, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=847)
-  Write of size 4 at 0x7ffffab25258 by thread T1:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous read of size 4 at 0x7ffffab25258 by main thread:
+WARNING: ThreadSanitizer: data race (pid=16096)
+  Read of size 4 at 0x7fff26544138 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
     #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7ffffab07000 ([stack]+0x00000001e258)
-
-  Thread T1 (tid=849, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
-==================
-ThreadSanitizer: reported 3 warnings
-a[500]=502
-*****     Log 5 for DRB001-antidep1-orig-yes.c with 4 threads and input size      *****
-==================
-WARNING: ThreadSanitizer: data race (pid=863)
-  Atomic read of size 1 at 0x7b6800001700 by main thread:
-    #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
-    #1 <null> <null> (libomp.so.5+0x739be)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Previous write of size 1 at 0x7b6800001700 by thread T2:
-    #0 pthread_mutex_init /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:1211:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x441a33)
-    #1 <null> <null> (libomp.so.5+0x71661)
-
-  Location is heap block of size 1440 at 0x7b6800001200 allocated by main thread:
-    #0 malloc /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:666:5 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x43ee57)
-    #1 <null> <null> (libomp.so.5+0x1d4a1)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T2 (tid=866, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
-==================
-LLVMSymbolizer: error reading file: No such file or directory
-==================
-WARNING: ThreadSanitizer: data race (pid=863)
-  Read of size 4 at 0x7ffdab968158 by main thread:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-    #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Previous write of size 4 at 0x7ffdab968158 by thread T1:
+  Previous write of size 4 at 0x7fff26544138 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffdab94a000 ([stack]+0x00000001e158)
+  Location is global '??' at 0x7fff26526000 ([stack]+0x00000001e138)
 
-  Thread T1 (tid=865, running) created by main thread at:
+  Thread T1 (tid=16098, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -560,27 +402,27 @@ WARNING: ThreadSanitizer: data race (pid=863)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=863)
-  Read of size 4 at 0x7ffdab968540 by thread T1:
+WARNING: ThreadSanitizer: data race (pid=16096)
+  Read of size 4 at 0x7fff26544520 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7ffdab968540 by thread T2:
+  Previous write of size 4 at 0x7fff26544520 by thread T2:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffdab94a000 ([stack]+0x00000001e540)
+  Location is global '??' at 0x7fff26526000 ([stack]+0x00000001e520)
 
-  Thread T1 (tid=865, running) created by main thread at:
+  Thread T1 (tid=16098, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T2 (tid=866, running) created by main thread at:
+  Thread T2 (tid=16099, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -588,27 +430,27 @@ WARNING: ThreadSanitizer: data race (pid=863)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=863)
-  Read of size 4 at 0x7ffdab968928 by thread T2:
+WARNING: ThreadSanitizer: data race (pid=16096)
+  Read of size 4 at 0x7fff26544908 by thread T2:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7ffdab968928 by thread T3:
+  Previous write of size 4 at 0x7fff26544908 by thread T3:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffdab94a000 ([stack]+0x00000001e928)
+  Location is global '??' at 0x7fff26526000 ([stack]+0x00000001e908)
 
-  Thread T2 (tid=866, running) created by main thread at:
+  Thread T2 (tid=16099, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T3 (tid=867, running) created by main thread at:
+  Thread T3 (tid=16100, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -617,9 +459,223 @@ SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/
 ==================
 ThreadSanitizer: reported 4 warnings
 a[500]=502
-*****     Log 1 for DRB001-antidep1-orig-yes.c with 8 threads and input size      *****
+*****     Log 4 for DRB001-antidep1-orig-yes.c with 4 threads and input size 32     *****
 ==================
-WARNING: ThreadSanitizer: data race (pid=886)
+WARNING: ThreadSanitizer: data race (pid=16114)
+  Atomic read of size 1 at 0x7b6800001700 by main thread:
+    #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
+    #1 <null> <null> (libomp.so.5+0x739be)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Previous write of size 1 at 0x7b6800001700 by thread T2:
+    #0 pthread_mutex_init /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:1211:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x441a33)
+    #1 <null> <null> (libomp.so.5+0x71661)
+
+  Location is heap block of size 1440 at 0x7b6800001200 allocated by main thread:
+    #0 malloc /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:666:5 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x43ee57)
+    #1 <null> <null> (libomp.so.5+0x1d4a1)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T2 (tid=16117, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
+==================
+LLVMSymbolizer: error reading file: No such file or directory
+==================
+WARNING: ThreadSanitizer: data race (pid=16114)
+  Read of size 4 at 0x7ffed23f09e8 by main thread:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+    #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Previous write of size 4 at 0x7ffed23f09e8 by thread T1:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffed23d3000 ([stack]+0x00000001d9e8)
+
+  Thread T1 (tid=16116, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16114)
+  Read of size 4 at 0x7ffed23f0dd0 by thread T1:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffed23f0dd0 by thread T2:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffed23d3000 ([stack]+0x00000001ddd0)
+
+  Thread T1 (tid=16116, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T2 (tid=16117, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16114)
+  Read of size 4 at 0x7ffed23f11b8 by thread T2:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffed23f11b8 by thread T3:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffed23d3000 ([stack]+0x00000001e1b8)
+
+  Thread T2 (tid=16117, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T3 (tid=16118, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+ThreadSanitizer: reported 4 warnings
+a[500]=502
+*****     Log 5 for DRB001-antidep1-orig-yes.c with 4 threads and input size 32     *****
+==================
+WARNING: ThreadSanitizer: data race (pid=16132)
+  Atomic read of size 1 at 0x7b6800001700 by main thread:
+    #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
+    #1 <null> <null> (libomp.so.5+0x739be)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Previous write of size 1 at 0x7b6800001700 by thread T2:
+    #0 pthread_mutex_init /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:1211:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x441a33)
+    #1 <null> <null> (libomp.so.5+0x71661)
+
+  Location is heap block of size 1440 at 0x7b6800001200 allocated by main thread:
+    #0 malloc /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:666:5 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x43ee57)
+    #1 <null> <null> (libomp.so.5+0x1d4a1)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T2 (tid=16135, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
+==================
+LLVMSymbolizer: error reading file: No such file or directory
+==================
+WARNING: ThreadSanitizer: data race (pid=16132)
+  Write of size 4 at 0x7ffcf4ec1bb8 by thread T1:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous read of size 4 at 0x7ffcf4ec1bb8 by main thread:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+    #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffcf4ea4000 ([stack]+0x00000001dbb8)
+
+  Thread T1 (tid=16134, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16132)
+  Read of size 4 at 0x7ffcf4ec2388 by thread T2:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffcf4ec2388 by thread T3:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffcf4ea4000 ([stack]+0x00000001e388)
+
+  Thread T2 (tid=16135, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T3 (tid=16136, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16132)
+  Read of size 4 at 0x7ffcf4ec1fa0 by thread T1:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffcf4ec1fa0 by thread T2:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffcf4ea4000 ([stack]+0x00000001dfa0)
+
+  Thread T1 (tid=16134, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T2 (tid=16135, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+ThreadSanitizer: reported 4 warnings
+a[500]=502
+*****     Log 1 for DRB001-antidep1-orig-yes.c with 8 threads and input size 32     *****
+==================
+WARNING: ThreadSanitizer: data race (pid=16154)
   Atomic read of size 1 at 0x7b6800002f00 by main thread:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -634,7 +690,7 @@ WARNING: ThreadSanitizer: data race (pid=886)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T4 (tid=895, running) created by main thread at:
+  Thread T4 (tid=16159, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -642,7 +698,7 @@ WARNING: ThreadSanitizer: data race (pid=886)
 SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=886)
+WARNING: ThreadSanitizer: data race (pid=16154)
   Atomic read of size 1 at 0x7b6800005300 by thread T4:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -656,12 +712,12 @@ WARNING: ThreadSanitizer: data race (pid=886)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T4 (tid=895, running) created by main thread at:
+  Thread T4 (tid=16159, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T7 (tid=900, running) created by main thread at:
+  Thread T7 (tid=16162, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -670,27 +726,27 @@ SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739
 ==================
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=886)
-  Read of size 4 at 0x7ffcee9ab95c by thread T2:
+WARNING: ThreadSanitizer: data race (pid=16154)
+  Read of size 4 at 0x7ffd6ae01308 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7ffcee9ab95c by thread T3:
+  Previous write of size 4 at 0x7ffd6ae01308 by thread T2:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffcee98e000 ([stack]+0x00000001d95c)
+  Location is global '??' at 0x7ffd6ade3000 ([stack]+0x00000001e308)
 
-  Thread T2 (tid=889, running) created by main thread at:
+  Thread T1 (tid=16156, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T3 (tid=890, running) created by main thread at:
+  Thread T2 (tid=16157, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -698,13 +754,231 @@ WARNING: ThreadSanitizer: data race (pid=886)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=886)
-  Write of size 4 at 0x7ffcee9ab574 by thread T1:
+WARNING: ThreadSanitizer: data race (pid=16154)
+  Read of size 4 at 0x7ffd6ae01114 by main thread:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+    #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Previous write of size 4 at 0x7ffd6ae01114 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous read of size 4 at 0x7ffcee9ab574 by main thread:
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffd6ade3000 ([stack]+0x00000001e114)
+
+  Thread T1 (tid=16156, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16154)
+  Read of size 4 at 0x7ffd6ae014fc by thread T2:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffd6ae014fc by thread T3:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffd6ade3000 ([stack]+0x00000001e4fc)
+
+  Thread T2 (tid=16157, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T3 (tid=16158, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16154)
+  Write of size 4 at 0x7ffd6ae016f0 by thread T4:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous read of size 4 at 0x7ffd6ae016f0 by thread T3:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffd6ade3000 ([stack]+0x00000001e6f0)
+
+  Thread T4 (tid=16159, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T3 (tid=16158, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16154)
+  Read of size 4 at 0x7ffd6ae01ad8 by thread T5:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffd6ae01ad8 by thread T6:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffd6ade3000 ([stack]+0x00000001ead8)
+
+  Thread T5 (tid=16160, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T6 (tid=16161, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16154)
+  Read of size 4 at 0x7ffd6ae01ccc by thread T6:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffd6ae01ccc by thread T7:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffd6ade3000 ([stack]+0x00000001eccc)
+
+  Thread T6 (tid=16161, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T7 (tid=16162, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+ThreadSanitizer: reported 8 warnings
+a[500]=502
+*****     Log 2 for DRB001-antidep1-orig-yes.c with 8 threads and input size 32     *****
+==================
+WARNING: ThreadSanitizer: data race (pid=16176)
+  Atomic read of size 1 at 0x7b6800002f00 by main thread:
+    #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
+    #1 <null> <null> (libomp.so.5+0x739be)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Previous write of size 1 at 0x7b6800002f00 by thread T4:
+    #0 pthread_mutex_init /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:1211:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x441a33)
+    #1 <null> <null> (libomp.so.5+0x71661)
+
+  Location is heap block of size 1440 at 0x7b6800002a00 allocated by main thread:
+    #0 malloc /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:666:5 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x43ee57)
+    #1 <null> <null> (libomp.so.5+0x1d4a1)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T4 (tid=16181, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16176)
+  Atomic read of size 1 at 0x7b6800005300 by thread T4:
+    #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
+    #1 <null> <null> (libomp.so.5+0x739be)
+
+  Previous write of size 1 at 0x7b6800005300 by thread T7:
+    #0 pthread_mutex_init /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:1211:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x441a33)
+    #1 <null> <null> (libomp.so.5+0x71661)
+
+  Location is heap block of size 1440 at 0x7b6800004e00 allocated by main thread:
+    #0 malloc /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:666:5 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x43ee57)
+    #1 <null> <null> (libomp.so.5+0x1d4a1)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T4 (tid=16181, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T7 (tid=16184, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
+==================
+LLVMSymbolizer: error reading file: No such file or directory
+==================
+WARNING: ThreadSanitizer: data race (pid=16176)
+  Read of size 4 at 0x7ffea23e1c9c by thread T2:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffea23e1c9c by thread T3:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffea23c4000 ([stack]+0x00000001dc9c)
+
+  Thread T2 (tid=16179, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T3 (tid=16180, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16176)
+  Write of size 4 at 0x7ffea23e18b4 by thread T1:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous read of size 4 at 0x7ffea23e18b4 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
@@ -712,9 +986,9 @@ WARNING: ThreadSanitizer: data race (pid=886)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffcee98e000 ([stack]+0x00000001d574)
+  Location is global '??' at 0x7ffea23c4000 ([stack]+0x00000001d8b4)
 
-  Thread T1 (tid=888, running) created by main thread at:
+  Thread T1 (tid=16178, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -722,27 +996,27 @@ WARNING: ThreadSanitizer: data race (pid=886)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=886)
-  Write of size 4 at 0x7ffcee9abb50 by thread T4:
+WARNING: ThreadSanitizer: data race (pid=16176)
+  Write of size 4 at 0x7ffea23e1e90 by thread T4:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous read of size 4 at 0x7ffcee9abb50 by thread T3:
+  Previous read of size 4 at 0x7ffea23e1e90 by thread T3:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffcee98e000 ([stack]+0x00000001db50)
+  Location is global '??' at 0x7ffea23c4000 ([stack]+0x00000001de90)
 
-  Thread T4 (tid=895, running) created by main thread at:
+  Thread T4 (tid=16181, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T3 (tid=890, running) created by main thread at:
+  Thread T3 (tid=16180, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -750,27 +1024,27 @@ WARNING: ThreadSanitizer: data race (pid=886)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=886)
-  Read of size 4 at 0x7ffcee9abf38 by thread T5:
+WARNING: ThreadSanitizer: data race (pid=16176)
+  Read of size 4 at 0x7ffea23e246c by thread T6:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7ffcee9abf38 by thread T6:
+  Previous write of size 4 at 0x7ffea23e246c by thread T7:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffcee98e000 ([stack]+0x00000001df38)
+  Location is global '??' at 0x7ffea23c4000 ([stack]+0x00000001e46c)
 
-  Thread T5 (tid=898, running) created by main thread at:
+  Thread T6 (tid=16183, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T6 (tid=899, running) created by main thread at:
+  Thread T7 (tid=16184, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -778,27 +1052,27 @@ WARNING: ThreadSanitizer: data race (pid=886)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=886)
-  Read of size 4 at 0x7ffcee9ac12c by thread T6:
+WARNING: ThreadSanitizer: data race (pid=16176)
+  Read of size 4 at 0x7ffea23e2278 by thread T5:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7ffcee9ac12c by thread T7:
+  Previous write of size 4 at 0x7ffea23e2278 by thread T6:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffcee98e000 ([stack]+0x00000001e12c)
+  Location is global '??' at 0x7ffea23c4000 ([stack]+0x00000001e278)
 
-  Thread T6 (tid=899, running) created by main thread at:
+  Thread T5 (tid=16182, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T7 (tid=900, running) created by main thread at:
+  Thread T6 (tid=16183, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -807,9 +1081,9 @@ SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/
 ==================
 ThreadSanitizer: reported 7 warnings
 a[500]=502
-*****     Log 2 for DRB001-antidep1-orig-yes.c with 8 threads and input size      *****
+*****     Log 3 for DRB001-antidep1-orig-yes.c with 8 threads and input size 32     *****
 ==================
-WARNING: ThreadSanitizer: data race (pid=913)
+WARNING: ThreadSanitizer: data race (pid=16198)
   Atomic read of size 1 at 0x7b6800002f00 by main thread:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -824,7 +1098,7 @@ WARNING: ThreadSanitizer: data race (pid=913)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T4 (tid=918, running) created by main thread at:
+  Thread T4 (tid=16203, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -832,7 +1106,7 @@ WARNING: ThreadSanitizer: data race (pid=913)
 SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=913)
+WARNING: ThreadSanitizer: data race (pid=16198)
   Atomic read of size 1 at 0x7b6800005300 by thread T4:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -846,12 +1120,12 @@ WARNING: ThreadSanitizer: data race (pid=913)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T4 (tid=918, running) created by main thread at:
+  Thread T4 (tid=16203, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T7 (tid=921, running) created by main thread at:
+  Thread T7 (tid=16206, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -860,27 +1134,27 @@ SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739
 ==================
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=913)
-  Read of size 4 at 0x7ffea48b13bc by thread T2:
+WARNING: ThreadSanitizer: data race (pid=16198)
+  Read of size 4 at 0x7ffd2710dc9c by thread T2:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7ffea48b13bc by thread T3:
+  Previous write of size 4 at 0x7ffd2710dc9c by thread T3:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffea4893000 ([stack]+0x00000001e3bc)
+  Location is global '??' at 0x7ffd270f0000 ([stack]+0x00000001dc9c)
 
-  Thread T2 (tid=916, running) created by main thread at:
+  Thread T2 (tid=16201, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T3 (tid=917, running) created by main thread at:
+  Thread T3 (tid=16202, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -888,13 +1162,13 @@ WARNING: ThreadSanitizer: data race (pid=913)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=913)
-  Write of size 4 at 0x7ffea48b0fd4 by thread T1:
+WARNING: ThreadSanitizer: data race (pid=16198)
+  Write of size 4 at 0x7ffd2710d8b4 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous read of size 4 at 0x7ffea48b0fd4 by main thread:
+  Previous read of size 4 at 0x7ffd2710d8b4 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
@@ -902,9 +1176,9 @@ WARNING: ThreadSanitizer: data race (pid=913)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffea4893000 ([stack]+0x00000001dfd4)
+  Location is global '??' at 0x7ffd270f0000 ([stack]+0x00000001d8b4)
 
-  Thread T1 (tid=915, running) created by main thread at:
+  Thread T1 (tid=16200, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -912,27 +1186,27 @@ WARNING: ThreadSanitizer: data race (pid=913)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=913)
-  Write of size 4 at 0x7ffea48b15b0 by thread T4:
+WARNING: ThreadSanitizer: data race (pid=16198)
+  Write of size 4 at 0x7ffd2710de90 by thread T4:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous read of size 4 at 0x7ffea48b15b0 by thread T3:
+  Previous read of size 4 at 0x7ffd2710de90 by thread T3:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffea4893000 ([stack]+0x00000001e5b0)
+  Location is global '??' at 0x7ffd270f0000 ([stack]+0x00000001de90)
 
-  Thread T4 (tid=918, running) created by main thread at:
+  Thread T4 (tid=16203, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T3 (tid=917, running) created by main thread at:
+  Thread T3 (tid=16202, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -940,27 +1214,27 @@ WARNING: ThreadSanitizer: data race (pid=913)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=913)
-  Read of size 4 at 0x7ffea48b1b8c by thread T6:
+WARNING: ThreadSanitizer: data race (pid=16198)
+  Read of size 4 at 0x7ffd2710e46c by thread T6:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7ffea48b1b8c by thread T7:
+  Previous write of size 4 at 0x7ffd2710e46c by thread T7:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffea4893000 ([stack]+0x00000001eb8c)
+  Location is global '??' at 0x7ffd270f0000 ([stack]+0x00000001e46c)
 
-  Thread T6 (tid=920, running) created by main thread at:
+  Thread T6 (tid=16205, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T7 (tid=921, running) created by main thread at:
+  Thread T7 (tid=16206, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -968,27 +1242,27 @@ WARNING: ThreadSanitizer: data race (pid=913)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=913)
-  Read of size 4 at 0x7ffea48b1998 by thread T5:
+WARNING: ThreadSanitizer: data race (pid=16198)
+  Read of size 4 at 0x7ffd2710e278 by thread T5:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7ffea48b1998 by thread T6:
+  Previous write of size 4 at 0x7ffd2710e278 by thread T6:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffea4893000 ([stack]+0x00000001e998)
+  Location is global '??' at 0x7ffd270f0000 ([stack]+0x00000001e278)
 
-  Thread T5 (tid=919, running) created by main thread at:
+  Thread T5 (tid=16204, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T6 (tid=920, running) created by main thread at:
+  Thread T6 (tid=16205, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -997,9 +1271,9 @@ SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/
 ==================
 ThreadSanitizer: reported 7 warnings
 a[500]=502
-*****     Log 3 for DRB001-antidep1-orig-yes.c with 8 threads and input size      *****
+*****     Log 4 for DRB001-antidep1-orig-yes.c with 8 threads and input size 32     *****
 ==================
-WARNING: ThreadSanitizer: data race (pid=935)
+WARNING: ThreadSanitizer: data race (pid=16220)
   Atomic read of size 1 at 0x7b6800002f00 by main thread:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -1014,15 +1288,44 @@ WARNING: ThreadSanitizer: data race (pid=935)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T4 (tid=943, running) created by main thread at:
+  Thread T4 (tid=16225, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
 SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
 ==================
+LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=935)
+WARNING: ThreadSanitizer: data race (pid=16220)
+  Read of size 4 at 0x7ffdb4c0434c by thread T2:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Previous write of size 4 at 0x7ffdb4c0434c by thread T3:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
+    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffdb4be6000 ([stack]+0x00000001e34c)
+
+  Thread T2 (tid=16223, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+  Thread T3 (tid=16224, running) created by main thread at:
+    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
+    #1 <null> <null> (libomp.so.5+0x72110)
+    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
+
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=16220)
   Atomic read of size 1 at 0x7b6800005300 by thread T4:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -1036,55 +1339,26 @@ WARNING: ThreadSanitizer: data race (pid=935)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T4 (tid=943, running) created by main thread at:
+  Thread T4 (tid=16225, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T7 (tid=946, running) created by main thread at:
+  Thread T7 (tid=16228, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
 SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
 ==================
-LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=935)
-  Read of size 4 at 0x7ffdab05ff9c by thread T2:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous write of size 4 at 0x7ffdab05ff9c by thread T3:
+WARNING: ThreadSanitizer: data race (pid=16220)
+  Write of size 4 at 0x7ffdb4c03f64 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7ffdab041000 ([stack]+0x00000001ef9c)
-
-  Thread T2 (tid=939, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T3 (tid=940, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=935)
-  Write of size 4 at 0x7ffdab05fbb4 by thread T1:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous read of size 4 at 0x7ffdab05fbb4 by main thread:
+  Previous read of size 4 at 0x7ffdb4c03f64 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
@@ -1092,104 +1366,20 @@ WARNING: ThreadSanitizer: data race (pid=935)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7ffdab041000 ([stack]+0x00000001ebb4)
+  Location is global '??' at 0x7ffdb4be6000 ([stack]+0x00000001df64)
 
-  Thread T1 (tid=937, running) created by main thread at:
+  Thread T1 (tid=16222, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
-==================
-WARNING: ThreadSanitizer: data race (pid=935)
-  Write of size 4 at 0x7ffdab060190 by thread T4:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous read of size 4 at 0x7ffdab060190 by thread T3:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7ffdab041000 ([stack]+0x00000001f190)
-
-  Thread T4 (tid=943, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T3 (tid=940, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=935)
-  Read of size 4 at 0x7ffdab060578 by thread T5:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous write of size 4 at 0x7ffdab060578 by thread T6:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7ffdab041000 ([stack]+0x00000001f578)
-
-  Thread T5 (tid=944, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T6 (tid=945, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=935)
-  Read of size 4 at 0x7ffdab06076c by thread T6:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous write of size 4 at 0x7ffdab06076c by thread T7:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7ffdab041000 ([stack]+0x00000001f76c)
-
-  Thread T6 (tid=945, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T7 (tid=946, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
-==================
-ThreadSanitizer: reported 7 warnings
+ThreadSanitizer: reported 4 warnings
 a[500]=502
-*****     Log 4 for DRB001-antidep1-orig-yes.c with 8 threads and input size      *****
+*****     Log 5 for DRB001-antidep1-orig-yes.c with 8 threads and input size 32     *****
 ==================
-WARNING: ThreadSanitizer: data race (pid=962)
+WARNING: ThreadSanitizer: data race (pid=16242)
   Atomic read of size 1 at 0x7b6800002f00 by main thread:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -1204,7 +1394,7 @@ WARNING: ThreadSanitizer: data race (pid=962)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T4 (tid=970, running) created by main thread at:
+  Thread T4 (tid=16247, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -1212,7 +1402,7 @@ WARNING: ThreadSanitizer: data race (pid=962)
 SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=962)
+WARNING: ThreadSanitizer: data race (pid=16242)
   Atomic read of size 1 at 0x7b6800005300 by thread T4:
     #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
     #1 <null> <null> (libomp.so.5+0x739be)
@@ -1226,202 +1416,12 @@ WARNING: ThreadSanitizer: data race (pid=962)
     #1 <null> <null> (libomp.so.5+0x1d4a1)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T4 (tid=970, running) created by main thread at:
+  Thread T4 (tid=16247, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T7 (tid=973, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
-==================
-LLVMSymbolizer: error reading file: No such file or directory
-==================
-WARNING: ThreadSanitizer: data race (pid=962)
-  Read of size 4 at 0x7fff9a2c037c by thread T2:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous write of size 4 at 0x7fff9a2c037c by thread T3:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7fff9a2a2000 ([stack]+0x00000001e37c)
-
-  Thread T2 (tid=966, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T3 (tid=967, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=962)
-  Write of size 4 at 0x7fff9a2bff94 by thread T1:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous read of size 4 at 0x7fff9a2bff94 by main thread:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-    #3 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7fff9a2a2000 ([stack]+0x00000001df94)
-
-  Thread T1 (tid=965, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=962)
-  Write of size 4 at 0x7fff9a2c0570 by thread T4:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous read of size 4 at 0x7fff9a2c0570 by thread T3:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7fff9a2a2000 ([stack]+0x00000001e570)
-
-  Thread T4 (tid=970, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T3 (tid=967, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=962)
-  Read of size 4 at 0x7fff9a2c0958 by thread T5:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous write of size 4 at 0x7fff9a2c0958 by thread T6:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7fff9a2a2000 ([stack]+0x00000001e958)
-
-  Thread T5 (tid=971, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T6 (tid=972, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=962)
-  Read of size 4 at 0x7fff9a2c0b4c by thread T6:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous write of size 4 at 0x7fff9a2c0b4c by thread T7:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7fff9a2a2000 ([stack]+0x00000001eb4c)
-
-  Thread T6 (tid=972, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T7 (tid=973, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
-==================
-ThreadSanitizer: reported 7 warnings
-a[500]=502
-*****     Log 5 for DRB001-antidep1-orig-yes.c with 8 threads and input size      *****
-==================
-WARNING: ThreadSanitizer: data race (pid=988)
-  Atomic read of size 1 at 0x7b6800002f00 by main thread:
-    #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
-    #1 <null> <null> (libomp.so.5+0x739be)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Previous write of size 1 at 0x7b6800002f00 by thread T4:
-    #0 pthread_mutex_init /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:1211:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x441a33)
-    #1 <null> <null> (libomp.so.5+0x71661)
-
-  Location is heap block of size 1440 at 0x7b6800002a00 allocated by main thread:
-    #0 malloc /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:666:5 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x43ee57)
-    #1 <null> <null> (libomp.so.5+0x1d4a1)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T4 (tid=993, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739be) 
-==================
-==================
-WARNING: ThreadSanitizer: data race (pid=988)
-  Atomic read of size 1 at 0x7b6800005300 by thread T4:
-    #0 pthread_mutex_lock /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/../sanitizer_common/sanitizer_common_interceptors.inc:3914:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x45bc6e)
-    #1 <null> <null> (libomp.so.5+0x739be)
-
-  Previous write of size 1 at 0x7b6800005300 by thread T7:
-    #0 pthread_mutex_init /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:1211:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x441a33)
-    #1 <null> <null> (libomp.so.5+0x71661)
-
-  Location is heap block of size 1440 at 0x7b6800004e00 allocated by main thread:
-    #0 malloc /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:666:5 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x43ee57)
-    #1 <null> <null> (libomp.so.5+0x1d4a1)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T4 (tid=993, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T7 (tid=1000, running) created by main thread at:
+  Thread T7 (tid=16250, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -1430,41 +1430,41 @@ SUMMARY: ThreadSanitizer: data race (/usr/lib/x86_64-linux-gnu/libomp.so.5+0x739
 ==================
 LLVMSymbolizer: error reading file: No such file or directory
 ==================
-WARNING: ThreadSanitizer: data race (pid=988)
-  Read of size 4 at 0x7fff31645c2c by thread T2:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+WARNING: ThreadSanitizer: data race (pid=16242)
+  Write of size 4 at 0x7ffea33bcc2c by thread T3:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7fff31645c2c by thread T3:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+  Previous read of size 4 at 0x7ffea33bcc2c by thread T2:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7fff31627000 ([stack]+0x00000001ec2c)
+  Location is global '??' at 0x7ffea339e000 ([stack]+0x00000001ec2c)
 
-  Thread T2 (tid=991, running) created by main thread at:
+  Thread T3 (tid=16246, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T3 (tid=992, running) created by main thread at:
+  Thread T2 (tid=16245, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=988)
-  Write of size 4 at 0x7fff31645844 by thread T1:
+WARNING: ThreadSanitizer: data race (pid=16242)
+  Write of size 4 at 0x7ffea33bc844 by thread T1:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous read of size 4 at 0x7fff31645844 by main thread:
+  Previous read of size 4 at 0x7ffea33bc844 by main thread:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
@@ -1472,9 +1472,9 @@ WARNING: ThreadSanitizer: data race (pid=988)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7fff31627000 ([stack]+0x00000001e844)
+  Location is global '??' at 0x7ffea339e000 ([stack]+0x00000001e844)
 
-  Thread T1 (tid=990, running) created by main thread at:
+  Thread T1 (tid=16244, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -1482,27 +1482,27 @@ WARNING: ThreadSanitizer: data race (pid=988)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=988)
-  Write of size 4 at 0x7fff31645e20 by thread T4:
+WARNING: ThreadSanitizer: data race (pid=16242)
+  Write of size 4 at 0x7ffea33bd014 by thread T5:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous read of size 4 at 0x7fff31645e20 by thread T3:
+  Previous read of size 4 at 0x7ffea33bd014 by thread T4:
     #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7fff31627000 ([stack]+0x00000001ee20)
+  Location is global '??' at 0x7ffea339e000 ([stack]+0x00000001f014)
 
-  Thread T4 (tid=993, running) created by main thread at:
+  Thread T5 (tid=16248, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T3 (tid=992, running) created by main thread at:
+  Thread T4 (tid=16247, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
@@ -1510,60 +1510,32 @@ WARNING: ThreadSanitizer: data race (pid=988)
 SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
 ==================
-WARNING: ThreadSanitizer: data race (pid=988)
-  Read of size 4 at 0x7fff316463fc by thread T6:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
+WARNING: ThreadSanitizer: data race (pid=16242)
+  Write of size 4 at 0x7ffea33bd3fc by thread T7:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
-  Previous write of size 4 at 0x7fff316463fc by thread T7:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
+  Previous read of size 4 at 0x7ffea33bd3fc by thread T6:
+    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
     #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
     #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
 
   Location is stack of main thread.
 
-  Location is global '??' at 0x7fff31627000 ([stack]+0x00000001f3fc)
+  Location is global '??' at 0x7ffea339e000 ([stack]+0x00000001f3fc)
 
-  Thread T6 (tid=999, running) created by main thread at:
+  Thread T7 (tid=16250, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-  Thread T7 (tid=1000, running) created by main thread at:
+  Thread T6 (tid=16249, running) created by main thread at:
     #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
     #1 <null> <null> (libomp.so.5+0x72110)
     #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
 
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
+SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 in .omp_outlined._debug__
 ==================
-==================
-WARNING: ThreadSanitizer: data race (pid=988)
-  Read of size 4 at 0x7fff31646208 by thread T5:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7961)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Previous write of size 4 at 0x7fff31646208 by thread T6:
-    #0 .omp_outlined._debug__ /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:9 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7998)
-    #1 .omp_outlined. /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:63:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x4a7a88)
-    #2 __kmp_invoke_microtask <null> (libomp.so.5+0x7c452)
-
-  Location is stack of main thread.
-
-  Location is global '??' at 0x7fff31627000 ([stack]+0x00000001f208)
-
-  Thread T5 (tid=998, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-  Thread T6 (tid=999, running) created by main thread at:
-    #0 pthread_create /home/yshi10/ARCHER/ArcherBuild/llvm_src/projects/compiler-rt/lib/tsan/rtl/tsan_interceptors.cc:992:3 (DRB001-antidep1-orig-yes.c.tsan-clang.out+0x440925)
-    #1 <null> <null> (libomp.so.5+0x72110)
-    #2 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310 (libc.so.6+0x21b96)
-
-SUMMARY: ThreadSanitizer: data race /home/yshi10/dataracebench/micro-benchmarks/DRB001-antidep1-orig-yes.c:64:10 in .omp_outlined._debug__
-==================
-ThreadSanitizer: reported 7 warnings
+ThreadSanitizer: reported 6 warnings
 a[500]=502

@@ -147,8 +147,8 @@ if [[ "$OPTION" == "--romp" ]]; then
 fi
 
 if [[ "$OPTION" == "--newbench" ]]; then
-   scripts/test-harness.sh  -x archer
-   scripts/test-harness.sh  -x tsan-clang
-   scripts/test-harness.sh  -x inspector-max-resources
-   scripts/test-harness.sh  -x romp
+   scripts/test-harness.sh -d 32 -x archer
+   scripts/test-harness.sh -d 32 -x tsan-clang
+   scripts/test-harness.sh -d 32 -x inspector
+   scripts/test-harness.sh -d 32 -x romp
 fi

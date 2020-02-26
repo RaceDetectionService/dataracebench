@@ -33,7 +33,13 @@ Collection started. To stop the collection, either press CTRL-C or enter from an
 Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
 a[500]=502
   
-0 new problem(s) found 
+1 new problem(s) found 
+    1 Data race problem(s) detected 
+P1: Error: Data race: New
+ P1.5: Error: Data race: New
+  DRB001-antidep1-orig-yes.c.inspector.out!0xe95: Error X9: Write: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
+  DRB001-antidep1-orig-yes.c.inspector.out!0xd52: Error X10: Read: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
+
 *****     Log 2 for DRB001-antidep1-orig-yes.c with 4 threads and input size 32     *****
 Collection started. To stop the collection, either press CTRL-C or enter from another console window: inspxe-cl -r /home/yshi10/dataracebench/myResult -command stop.
 Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
@@ -51,25 +57,13 @@ Collection started. To stop the collection, either press CTRL-C or enter from an
 Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
 a[500]=502
   
-1 new problem(s) found 
-    1 Data race problem(s) detected 
-P1: Error: Data race: New
- P1.5: Error: Data race: New
-  DRB001-antidep1-orig-yes.c.inspector.out!0xe95: Error X9: Write: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
-  DRB001-antidep1-orig-yes.c.inspector.out!0xd52: Error X10: Read: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
-
+0 new problem(s) found 
 *****     Log 4 for DRB001-antidep1-orig-yes.c with 4 threads and input size 32     *****
 Collection started. To stop the collection, either press CTRL-C or enter from another console window: inspxe-cl -r /home/yshi10/dataracebench/myResult -command stop.
 Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
 a[500]=502
   
-1 new problem(s) found 
-    1 Data race problem(s) detected 
-P1: Error: Data race: New
- P1.5: Error: Data race: New
-  DRB001-antidep1-orig-yes.c.inspector.out!0xe95: Error X9: Write: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
-  DRB001-antidep1-orig-yes.c.inspector.out!0xd52: Error X10: Read: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
-
+0 new problem(s) found 
 *****     Log 5 for DRB001-antidep1-orig-yes.c with 4 threads and input size 32     *****
 Collection started. To stop the collection, either press CTRL-C or enter from another console window: inspxe-cl -r /home/yshi10/dataracebench/myResult -command stop.
 Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
@@ -87,7 +81,13 @@ Collection started. To stop the collection, either press CTRL-C or enter from an
 Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
 a[500]=502
   
-0 new problem(s) found 
+1 new problem(s) found 
+    1 Data race problem(s) detected 
+P1: Error: Data race: New
+ P1.9: Error: Data race: New
+  DRB001-antidep1-orig-yes.c.inspector.out!0xe95: Error X17: Write: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
+  DRB001-antidep1-orig-yes.c.inspector.out!0xd52: Error X18: Read: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
+
 *****     Log 2 for DRB001-antidep1-orig-yes.c with 8 threads and input size 32     *****
 Collection started. To stop the collection, either press CTRL-C or enter from another console window: inspxe-cl -r /home/yshi10/dataracebench/myResult -command stop.
 Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
@@ -97,8 +97,8 @@ a[500]=502
     1 Data race problem(s) detected 
 P1: Error: Data race: New
  P1.9: Error: Data race: New
-  DRB001-antidep1-orig-yes.c.inspector.out!0xe95: Error X17: Write: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
-  DRB001-antidep1-orig-yes.c.inspector.out!0xd52: Error X18: Read: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
+  DRB001-antidep1-orig-yes.c.inspector.out!0xe34: Error X17: Write: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
+  DRB001-antidep1-orig-yes.c.inspector.out!0xd37: Error X18: Read: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
 
 *****     Log 3 for DRB001-antidep1-orig-yes.c with 8 threads and input size 32     *****
 Collection started. To stop the collection, either press CTRL-C or enter from another console window: inspxe-cl -r /home/yshi10/dataracebench/myResult -command stop.
@@ -117,22 +117,10 @@ Collection started. To stop the collection, either press CTRL-C or enter from an
 Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
 a[500]=502
   
-1 new problem(s) found 
-    1 Data race problem(s) detected 
-P1: Error: Data race: New
- P1.9: Error: Data race: New
-  DRB001-antidep1-orig-yes.c.inspector.out!0xe95: Error X17: Write: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
-  DRB001-antidep1-orig-yes.c.inspector.out!0xd52: Error X18: Read: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
-
+0 new problem(s) found 
 *****     Log 5 for DRB001-antidep1-orig-yes.c with 8 threads and input size 32     *****
 Collection started. To stop the collection, either press CTRL-C or enter from another console window: inspxe-cl -r /home/yshi10/dataracebench/myResult -command stop.
 Warning: One or more threads in the application accessed the stack of another thread. This may indicate one or more bugs in your application. Setting the Inspector to detect data races on stack accesses and running another analysis may help you locate these and other bugs.
 a[500]=502
   
-1 new problem(s) found 
-    1 Data race problem(s) detected 
-P1: Error: Data race: New
- P1.9: Error: Data race: New
-  DRB001-antidep1-orig-yes.c.inspector.out!0xe95: Error X17: Write: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
-  DRB001-antidep1-orig-yes.c.inspector.out!0xd52: Error X18: Read: Function main: Module /home/yshi10/dataracebench/results/exec/DRB001-antidep1-orig-yes.c.inspector.out
-
+0 new problem(s) found 

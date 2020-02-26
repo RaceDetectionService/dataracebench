@@ -79,6 +79,7 @@ RACES_PATTERN='[[:alnum:]]+-[[:alnum:]]+-yes\.c'
 CPP_PATTERN='[[:alnum:]]+\.cpp'
 
 PARSERTOOL="python3"
+RESULT_FLAG="-report problems -result-dir myResult"
 
 usage () {
   echo
@@ -249,11 +250,11 @@ for tool in "${TOOLS[@]}"; do
   runtime_flags=''
   case "$tool" in
     'inspector-max-resources')
-      runtime_flags+=" -collect ti3 -knob scope=extreme -knob stack-depth=16 -knob use-maximum-resources=true"
+      runtime_flags+=" -collect ti3 -knob scope=extreme -knob stack-depth=16 -knob use-maximum-resources=true -result-dir myResult"
       tool='inspector'
       ;;
     'inspector')
-      runtime_flags+=" -collect ti3"
+      runtime_flags+=" -collect ti3 -result-dir myResult"
       ;;
   esac
 
@@ -379,7 +380,12 @@ for tool in "${TOOLS[@]}"; do
 		$TIMEOUTCMD $TIMEOUTMIN"m" $MEMCHECK -f "%M" -o "$MEMLOG" $INSPECTOR $runtime_flags -- "./$exname" $size &> tmp.log;
 		check_return_code $?;
                 echo "testname return $testreturn";
-                races=$(grep 'Data race' tmp.log | sed -E 's/[[:space:]]*([[:digit:]]+).*/\1/');
+		$INSPECTOR $RESULT_FLAG >>tmp.log
+		rm -rf myResult
+		$PARSERTOOL ./parser/InspectoroutputParser.py tmp.log >> "$LOG_DIR/$parsername" >"$LOG_DIR/tmp.log"
+		$PARSERTOOL count.py "$LOG_DIR/tmp.log" >"$LOG_DIR/tmp1.log"
+		races=$(cat "$LOG_DIR/tmp1.log")		
+#                races=$(grep 'Data race' tmp.log | sed -E 's/[[:space:]]*([[:digit:]]+).*/\1/');
                 cat tmp.log >> "$LOG_DIR/$logname" || >tmp.log ;;
               romp)
                 $TIMEOUTCMD $TIMEOUTMIN"m" $MEMCHECK -f "%M" -o "$MEMLOG" "./$rompexec" $size &> tmp.log;

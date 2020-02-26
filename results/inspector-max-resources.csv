@@ -1,13 +1,181 @@
 tool,id,filename,haverace,threads,dataset,races,elapsed-time(seconds),used-mem(KBs),compile-return,runtime-return
-inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,6.745,Command exited with non-zero status 8
-90952,0,0
-inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,2,6.694,Command exited with non-zero status 8
-91180,0,0
-inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,6.740,Command exited with non-zero status 8
-90932,0,0
-inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,6.806,Command exited with non-zero status 8
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,0,.338,Command exited with non-zero status 1
+34024,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,0,6.705,Command exited with non-zero status 8
 91120,0,0
-inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,2,6.648,Command exited with non-zero status 8
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,0,5.713,Command exited with non-zero status 8
+90920,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,0,6.792,Command exited with non-zero status 8
+91068,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,32,0,6.662,Command exited with non-zero status 8
+91064,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,64,0,6.683,Command exited with non-zero status 8
+91152,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,64,0,6.713,Command exited with non-zero status 8
+91060,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,64,0,6.679,Command exited with non-zero status 8
+91020,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,64,0,6.759,Command exited with non-zero status 8
+91104,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,64,0,6.679,Command exited with non-zero status 8
 90924,0,0
-inspector,001,"DRB001-antidep1-orig-yes.c",true,4,32,2,6.828,Command exited with non-zero status 8
-96924,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,128,0,6.653,Command exited with non-zero status 8
+91112,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,128,0,6.675,Command exited with non-zero status 8
+91140,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,128,0,6.623,Command exited with non-zero status 8
+91096,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,128,0,6.631,Command exited with non-zero status 8
+90996,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,128,0,6.679,Command exited with non-zero status 8
+91096,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,256,0,6.656,Command exited with non-zero status 8
+91132,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,256,0,6.633,Command exited with non-zero status 8
+91036,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,256,0,6.701,Command exited with non-zero status 8
+90968,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,256,0,6.637,Command exited with non-zero status 8
+91300,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,256,0,6.626,Command exited with non-zero status 8
+91132,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,512,0,6.670,Command exited with non-zero status 8
+91136,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,512,0,6.656,Command exited with non-zero status 8
+91108,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,512,0,6.684,Command exited with non-zero status 8
+91216,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,512,0,6.632,Command exited with non-zero status 8
+90868,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,512,0,6.761,Command exited with non-zero status 8
+91204,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,1024,0,6.769,Command exited with non-zero status 8
+91020,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,1024,0,6.708,Command exited with non-zero status 8
+91092,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,1024,0,6.782,Command exited with non-zero status 8
+90988,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,1024,0,6.773,Command exited with non-zero status 8
+91140,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,2,1024,0,6.696,Command exited with non-zero status 8
+91004,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,32,0,6.760,Command exited with non-zero status 8
+96920,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,32,0,6.878,Command exited with non-zero status 8
+97104,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,32,0,6.891,Command exited with non-zero status 8
+96984,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,32,0,6.853,Command exited with non-zero status 8
+97196,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,32,0,6.806,Command exited with non-zero status 8
+97072,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,64,0,6.818,Command exited with non-zero status 8
+97292,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,64,0,6.741,Command exited with non-zero status 8
+97008,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,64,0,6.782,Command exited with non-zero status 8
+97156,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,64,0,6.890,Command exited with non-zero status 8
+97136,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,64,0,6.868,Command exited with non-zero status 8
+97012,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,128,0,6.841,Command exited with non-zero status 8
+96944,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,128,0,6.917,Command exited with non-zero status 8
+97060,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,128,0,6.903,Command exited with non-zero status 8
+96956,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,128,0,6.799,Command exited with non-zero status 8
+97052,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,128,0,6.834,Command exited with non-zero status 8
+97044,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,256,0,6.850,Command exited with non-zero status 8
+97160,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,256,0,6.824,Command exited with non-zero status 8
+96932,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,256,0,6.870,Command exited with non-zero status 8
+97184,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,256,0,6.778,Command exited with non-zero status 8
+97112,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,256,0,6.856,Command exited with non-zero status 8
+97160,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,512,0,6.807,Command exited with non-zero status 8
+97040,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,512,0,6.855,Command exited with non-zero status 8
+96836,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,512,0,6.797,Command exited with non-zero status 8
+96844,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,512,0,6.812,Command exited with non-zero status 8
+96832,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,512,0,5.993,Command exited with non-zero status 8
+97204,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,1024,0,6.859,Command exited with non-zero status 8
+96948,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,1024,0,6.912,Command exited with non-zero status 8
+97152,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,1024,0,6.869,Command exited with non-zero status 8
+96780,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,1024,0,6.909,Command exited with non-zero status 8
+97032,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,4,1024,0,6.764,Command exited with non-zero status 8
+96972,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,32,0,7.104,Command exited with non-zero status 8
+109024,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,32,0,7.248,Command exited with non-zero status 8
+109140,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,32,0,7.120,Command exited with non-zero status 8
+109132,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,32,0,7.133,Command exited with non-zero status 8
+108668,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,32,0,7.102,Command exited with non-zero status 8
+109084,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,64,0,6.956,Command exited with non-zero status 8
+108764,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,64,0,7.163,Command exited with non-zero status 8
+109120,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,64,0,6.972,Command exited with non-zero status 8
+108788,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,64,0,7.026,Command exited with non-zero status 8
+108916,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,64,0,7.114,Command exited with non-zero status 8
+108852,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,128,0,6.881,Command exited with non-zero status 8
+108768,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,128,0,6.990,Command exited with non-zero status 8
+108776,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,128,0,6.822,Command exited with non-zero status 8
+108736,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,128,0,7.029,Command exited with non-zero status 8
+108860,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,128,0,7.122,Command exited with non-zero status 8
+109420,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,256,0,7.062,Command exited with non-zero status 8
+108748,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,256,0,7.031,Command exited with non-zero status 8
+108220,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,256,0,6.942,Command exited with non-zero status 8
+108760,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,256,0,6.871,Command exited with non-zero status 8
+108404,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,256,0,5.937,Command exited with non-zero status 8
+108652,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,512,0,6.913,Command exited with non-zero status 8
+108636,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,512,0,6.911,Command exited with non-zero status 8
+108796,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,512,0,6.945,Command exited with non-zero status 8
+108608,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,512,0,6.875,Command exited with non-zero status 8
+108644,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,512,0,6.922,Command exited with non-zero status 8
+108892,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,1024,0,6.903,Command exited with non-zero status 8
+108708,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,1024,0,6.987,Command exited with non-zero status 8
+108748,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,1024,0,6.803,Command exited with non-zero status 8
+107684,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,1024,0,6.885,Command exited with non-zero status 8
+108888,0,0
+inspector,001,"DRB001-antidep1-orig-yes.c",true,8,1024,0,6.902,Command exited with non-zero status 8
+108656,0,0

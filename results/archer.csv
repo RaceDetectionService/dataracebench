@@ -1,31 +1,31 @@
 tool,id,filename,haverace,threads,dataset,races,elapsed-time(seconds),used-mem(KBs),compile-return,runtime-return
-archer,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,.165,Command exited with non-zero status 66
-19320,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,.175,Command exited with non-zero status 66
-19300,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,.164,Command exited with non-zero status 66
+archer,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,.181,Command exited with non-zero status 66
 19264,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,.192,Command exited with non-zero status 66
-19340,0,0
 archer,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,.168,Command exited with non-zero status 66
-19420,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,2,.163,Command exited with non-zero status 66
-20816,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,2,.149,Command exited with non-zero status 66
+19404,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,.182,Command exited with non-zero status 66
+19368,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,.176,Command exited with non-zero status 66
+19328,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,2,32,1,.180,Command exited with non-zero status 66
+19432,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,2,.186,Command exited with non-zero status 66
+20840,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,3,.157,Command exited with non-zero status 66
+20836,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,3,.173,Command exited with non-zero status 66
 20884,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,2,.184,Command exited with non-zero status 66
-20816,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,2,.165,Command exited with non-zero status 66
-20880,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,3,.164,Command exited with non-zero status 66
-20952,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,5,.208,Command exited with non-zero status 66
-23456,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,5,.223,Command exited with non-zero status 66
-23412,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,5,.224,Command exited with non-zero status 66
+archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,3,.195,Command exited with non-zero status 66
+20916,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,4,32,2,.153,Command exited with non-zero status 66
+20852,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,4,.211,Command exited with non-zero status 66
+23388,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,5,.199,Command exited with non-zero status 66
+23528,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,5,.204,Command exited with non-zero status 66
+23496,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,5,.199,Command exited with non-zero status 66
+23420,0,0
+archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,6,.200,Command exited with non-zero status 66
 23416,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,5,.217,Command exited with non-zero status 66
-23480,0,0
-archer,001,"DRB001-antidep1-orig-yes.c",true,8,32,5,.205,Command exited with non-zero status 66
-23432,0,0

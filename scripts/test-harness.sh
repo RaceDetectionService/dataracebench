@@ -273,8 +273,10 @@ for tool in "${TOOLS[@]}"; do
     rompexec="$exname.inst"
     logname="$(basename "$test").$tool.log"
     parsername="$(basename "$test").$tool.parser.log"
+    parsertimename="$(basename "$test").$tool.parsertime.log"
     if [[ -e "$LOG_DIR/$logname" ]]; then rm "$LOG_DIR/$logname"; fi
     if [[ -e "$LOG_DIR/$parsername" ]]; then rm "$LOG_DIR/$parsername"; fi
+    if [[ -e "$LOG_DIR/$parsertimename" ]]; then rm "$LOG_DIR/$parsertimename"; fi
     if grep -q 'PolyBench' "$test"; then additional_compile_flags+=" $POLYFLAG"; fi
 
     if [[ "$test" =~ $CPP_PATTERN ]]; then
@@ -353,7 +355,9 @@ for tool in "${TOOLS[@]}"; do
                 $TIMEOUTCMD $TIMEOUTMIN"m" $MEMCHECK -f "%M" -o "$MEMLOG" "./$exname" $size &> tmp.log;
                 check_return_code $?;
 		echo "testname return $testreturn"
+		echo "start time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
 		$PARSERTOOL ./parser/ArchoutputParser.py tmp.log >"$LOG_DIR/tmp.log"
+		echo "end time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
 		cat "$LOG_DIR/tmp.log" >> "$LOG_DIR/$parsername"
 		$PARSERTOOL count.py "$LOG_DIR/tmp.log" >"$LOG_DIR/tmp1.log"
 		races=$(cat "$LOG_DIR/tmp1.log")
@@ -364,7 +368,9 @@ for tool in "${TOOLS[@]}"; do
                 $TIMEOUTCMD $TIMEOUTMIN"m" $MEMCHECK -f "%M" -o "$MEMLOG" "./$exname" $size &> tmp.log;
                 check_return_code $?;
 		echo "testname return $testreturn"
+		echo "start time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
 		$PARSERTOOL ./parser/TsanoutputParser.py tmp.log >"$LOG_DIR/tmp.log"
+		echo "end time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
 		cat "$LOG_DIR/tmp.log" >> "$LOG_DIR/$parsername"
 		$PARSERTOOL count.py "$LOG_DIR/tmp.log" >"$LOG_DIR/tmp1.log"
 		races=$(cat "$LOG_DIR/tmp1.log")
@@ -384,7 +390,9 @@ for tool in "${TOOLS[@]}"; do
                 echo "testname return $testreturn";
 		$INSPECTOR $RESULT_FLAG >>tmp.log
 		rm -rf myResult
+		echo "start time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"		
 		$PARSERTOOL ./parser/InspectoroutputParser.py tmp.log >"$LOG_DIR/tmp.log"
+		echo "end time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
 		cat "$LOG_DIR/tmp.log" >> "$LOG_DIR/$parsername"
 		$PARSERTOOL count.py "$LOG_DIR/tmp.log" >"$LOG_DIR/tmp1.log"
 		races=$(cat "$LOG_DIR/tmp1.log")		
@@ -394,7 +402,9 @@ for tool in "${TOOLS[@]}"; do
                 $TIMEOUTCMD $TIMEOUTMIN"m" $MEMCHECK -f "%M" -o "$MEMLOG" "./$rompexec" $size &> tmp.log;
                 check_return_code $?;
 		echo "testname return $testreturn"
+		echo "start time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
 		$PARSERTOOL ./parser/RompoutputParser.py tmp.log >"$LOG_DIR/tmp.log"
+		echo "end time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
 		cat "$LOG_DIR/tmp.log" >> "$LOG_DIR/$parsername"
 		$PARSERTOOL count.py "$LOG_DIR/tmp.log" >"$LOG_DIR/tmp1.log"
 		races=$(cat "$LOG_DIR/tmp1.log")

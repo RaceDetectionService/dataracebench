@@ -13,11 +13,11 @@ for i in range(0,len(content)):
 		index = y.index('at')
 		js = {}
 		js["Memory Address"] = y[index+1]
-		index = y.index('by')
-		Thread = re.split(":",y[index+2])
-		js["Write_thread"] = y[index+1] + ' ' + Thread[0]
-		y = content[i+1].split()
-		for item in y:
+		index1 = y.index('by')
+		Thread = re.split(":",y[index1+2])
+		js["Write_thread"] = y[index1+1] + ' ' + Thread[0]
+		y1 = content[i+1].split()
+		for item in y1:
 			if(re.search("^/",item)):
 				file = item.rsplit("/",1)
 				js["file loaction"] = file[0]
@@ -32,11 +32,11 @@ for i in range(0,len(content)):
 		index = y.index('at')
 		for item in jsAry:
 			if (item["Memory Address"] == y[index+1]):
-				index = y.index('by')
-				Thread = re.split(":",y[index+2])
-				item["Read_thread"] = y[index+1] + ' ' + Thread[0]
-				y = content[i+1].split()
-				for item1 in y:
+				index1 = y.index('by')
+				Thread = re.split(":",y[index1+2])
+				item["Read_thread"] = y[index1+1] + ' ' + Thread[0]
+				y1 = content[i+1].split()
+				for item1 in y1:
 					if(re.search("^/",item1)):
 						file = item1.rsplit("/",1)
 						location = file[1].split(":")
@@ -51,11 +51,11 @@ for i in range(0,len(content)):
 		index = y.index('at')
 		js = {}
 		js["Memory Address"] = y[index+1]
-		index = y.index('by')
-		Thread = re.split(":",y[index+2])
-		js["Write_thread"] = y[index+1] + ' ' + Thread[0]
-		y = content[i+1].split()
-		for item in y:
+		index1 = y.index('by')
+		Thread = re.split(":",y[index1+2])
+		js["Write_thread"] = y[index1+1] + ' ' + Thread[0]
+		y1 = content[i+1].split()
+		for item in y1:
 			if(re.search("^/",item)):
 				file = item.rsplit("/",1)
 				js["file loaction"] = file[0]
@@ -69,12 +69,26 @@ for i in range(0,len(content)):
 		y = content[i].split()
 		index = y.index('at')
 		for item in jsAry:
-			if (item["Memory Address"] == y[index+1]):
-				index = y.index('by')
-				Thread = re.split(":",y[index+2])
-				item["Write_thread"] = y[index+1] + ' ' + Thread[0]
-				y = content[i+1].split()
-				for item1 in y:
+			if item["Write_thread"] is not None:
+				if (item["Memory Address"] == y[index+1]):
+					index1 = y.index('by')
+					Thread = re.split(":",y[index1+2])
+					item["Write_thread1"] = y[index1+1] + ' ' + Thread[0]
+					y1 = content[i+1].split()
+					for item1 in y1:
+						if(re.search("^/",item1)):
+							file = item1.rsplit("/",1)
+							location = file[1].split(":")
+							item["write file name1"] = location[0]
+							item["write line #1"] = location[1]
+							item["write symbol position1"] = location[2]
+							item["tool"] = "ThreadSanitier"
+			elif (item["Memory Address"] == y[index+1]):
+				index1 = y.index('by')
+				Thread = re.split(":",y[index1+2])
+				item["Write_thread"] = y[index1+1] + ' ' + Thread[0]
+				y1 = content[i+1].split()
+				for item1 in y1:
 					if(re.search("^/",item1)):
 						file = item1.rsplit("/",1)
 						location = file[1].split(":")
@@ -82,6 +96,7 @@ for i in range(0,len(content)):
 						item["write line #"] = location[1]
 						item["write symbol position"] = location[2]
 						item["tool"] = "ThreadSanitier"
+
 
 js = {}
 for i in range(len(jsAry)):

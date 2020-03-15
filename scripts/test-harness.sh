@@ -286,13 +286,23 @@ for tool in "${TOOLS[@]}"; do
         clang)      clang++ -fopenmp -g $additional_compile_flags $test -o $exname -lm ;;
         intel)      icpc $ICPC_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm ;;
         helgrind)   g++ $VALGRIND_COMPILE_CPP_FLAGS $additional_compile_flags $test -o $exname -lm ;;
-        archer)     clang-archer++ $ARCHER_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm ;;
-        tsan-clang) clang++ $TSAN_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm ;;
-        tsan-gcc)   g++ $TSAN_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm ;;
-        inspector)  icpc $ICPC_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm ;;
-        romp)       g++ $ROMP_CPP_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm;
-                    echo $exname
-                    InstrumentMain --program=$exname;
+        archer)     
+		echo "start time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
+		clang-archer++ $ARCHER_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm ;;
+        tsan-clang) 
+		echo "start time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
+		clang++ $TSAN_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm ;;
+        tsan-gcc)   
+		echo "start time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
+		g++ $TSAN_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm ;;
+        inspector)  
+		echo "start time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
+		icpc $ICPC_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm ;;
+        romp)       
+		echo "start time is $((`date +%s`*1000+`date +%-N`/1000000))">>"$LOG_DIR/$parsertimename"
+		g++ $ROMP_CPP_COMPILE_FLAGS $additional_compile_flags $test -o $exname -lm;
+		echo $exname
+		InstrumentMain --program=$exname;
       esac
     else 
       case "$tool" in 

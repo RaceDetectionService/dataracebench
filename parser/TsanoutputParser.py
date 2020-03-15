@@ -24,7 +24,10 @@ for i in range(0,len(content)):
 				location = file[1].split(":")
 				js["write file name"] = location[0]
 				js["write line #"] = location[1]
-				js["write symbol position"] = location[2]
+				if len(location) > 3:
+					js["write column #"] = location[2]
+				else:
+					js["write column #"] = -1
 		jsAry.append(js)
 	x = re.search("^Previous read",content[i])
 	if (x):
@@ -42,7 +45,10 @@ for i in range(0,len(content)):
 						location = file[1].split(":")
 						item["read file name"] = location[0]
 						item["read line #"] = location[1]
-						item["read symbol position"] = location[2]
+						if len(location) > 3:
+							js["Read column #"] = location[2]
+						else:
+							js["Read column #"] = -1
 						item["tool"] = "ThreadSanitier"
 		
 	x = re.search("^Read",content[i])
@@ -62,7 +68,10 @@ for i in range(0,len(content)):
 				location = file[1].split(":")
 				js["Read file name"] = location[0]
 				js["Read line #"] = location[1]
-				js["Read symbol position"] = location[2]
+				if len(location) > 3:
+					js["Read column #"] = location[2]
+				else:
+					js["Read column #"] = -1
 		jsAry.append(js)
 	x = re.search("^Previous write",content[i])
 	if (x):
@@ -81,7 +90,10 @@ for i in range(0,len(content)):
 							location = file[1].split(":")
 							item["write file name1"] = location[0]
 							item["write line #1"] = location[1]
-							item["write symbol position1"] = location[2]
+							if len(location) > 3:
+								js["write column #1"] = location[2]
+							else:
+								js["write column #1"] = -1
 							item["tool"] = "ThreadSanitier"
 			elif (item["Memory Address"] == y[index+1]):
 				index1 = y.index('by')
@@ -94,7 +106,10 @@ for i in range(0,len(content)):
 						location = file[1].split(":")
 						item["write file name"] = location[0]
 						item["write line #"] = location[1]
-						item["write symbol position"] = location[2]
+						if len(location) > 3:
+							js["write column #"] = location[2]
+						else:
+							js["write column #"] = -1
 						item["tool"] = "ThreadSanitier"
 
 

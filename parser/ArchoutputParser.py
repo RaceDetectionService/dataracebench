@@ -24,7 +24,7 @@ for i in range(0,len(content)):
 				location = file[1].split(":")
 				js["write file name"] = location[0]
 				js["write line #"] = location[1]
-				if len(location) > 3:
+				if len(location) >= 3:
 					js["write column #"] = location[2]
 				else:
 					js["write column #"] = -1
@@ -45,7 +45,7 @@ for i in range(0,len(content)):
 						location = file[1].split(":")
 						item["read file name"] = location[0]
 						item["read line #"] = location[1]
-						if len(location) > 3:
+						if len(location) >= 3:
 							js["Read column #"] = location[2]
 						else:
 							js["Read column #"] = -1
@@ -68,7 +68,7 @@ for i in range(0,len(content)):
 				location = file[1].split(":")
 				js["Read file name"] = location[0]
 				js["Read line #"] = location[1]
-				if len(location) > 3:
+				if len(location) >= 3:
 					js["Read column #"] = location[2]
 				else:
 					js["Read column #"] = -1
@@ -90,7 +90,7 @@ for i in range(0,len(content)):
 							location = file[1].split(":")
 							item["write file name1"] = location[0]
 							item["write line #1"] = location[1]
-							if len(location) > 3:
+							if len(location) >= 3:
 								js["write column #1"] = location[2]
 							else:
 								js["write column #1"] = -1
@@ -106,7 +106,7 @@ for i in range(0,len(content)):
 						location = file[1].split(":")
 						item["write file name"] = location[0]
 						item["write line #"] = location[1]
-						if len(location) > 3:
+						if len(location) >= 3:
 							js["write column #"] = location[2]
 						else:
 							js["write column #"] = -1

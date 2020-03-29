@@ -1,0 +1,121 @@
+tool,id,filename,haverace,threads,dataset,races,elapsed-time(seconds),used-mem(KBs),compile-return,runtime-return
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,2,32,1,.677,Command exited with non-zero status 66
+16352,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,2,32,1,.669,Command exited with non-zero status 66
+16284,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,2,32,1,.684,Command exited with non-zero status 66
+16308,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,2,32,1,.678,Command exited with non-zero status 66
+16276,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,2,32,1,.631,Command exited with non-zero status 66
+16252,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,4,32,3,.673,Command exited with non-zero status 66
+17384,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,4,32,3,.681,Command exited with non-zero status 66
+17292,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,4,32,3,.675,Command exited with non-zero status 66
+17440,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,4,32,3,.689,Command exited with non-zero status 66
+17388,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,4,32,3,.680,Command exited with non-zero status 66
+17344,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,8,32,6,.701,Command exited with non-zero status 66
+19732,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,8,32,7,.720,Command exited with non-zero status 66
+19868,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,8,32,7,.661,Command exited with non-zero status 66
+19780,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,8,32,7,.670,Command exited with non-zero status 66
+19816,0,0
+tsan-clang,086,"DRB086-static-data-member-orig-yes.cpp",true,8,32,3,.663,Command exited with non-zero status 66
+19712,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,2,32,1,.694,Command exited with non-zero status 66
+16252,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,2,32,1,.669,Command exited with non-zero status 66
+16364,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,2,32,1,.673,Command exited with non-zero status 66
+16356,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,2,32,1,.679,Command exited with non-zero status 66
+16360,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,2,32,1,.689,Command exited with non-zero status 66
+16280,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,4,32,3,.666,Command exited with non-zero status 66
+17432,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,4,32,3,.694,Command exited with non-zero status 66
+17428,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,4,32,3,.701,Command exited with non-zero status 66
+17332,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,4,32,3,.658,Command exited with non-zero status 66
+17436,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,4,32,3,.689,Command exited with non-zero status 66
+17320,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,8,32,6,.712,Command exited with non-zero status 66
+19760,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,8,32,7,.694,Command exited with non-zero status 66
+19828,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,8,32,7,.680,Command exited with non-zero status 66
+19728,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,8,32,7,.687,Command exited with non-zero status 66
+19724,0,0
+tsan-clang,087,"DRB087-static-data-member2-orig-yes.cpp",true,8,32,7,.719,Command exited with non-zero status 66
+19712,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,2,32,2,.676,Command exited with non-zero status 66
+15812,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,2,32,2,.670,Command exited with non-zero status 66
+15848,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,2,32,2,.681,Command exited with non-zero status 66
+15856,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,2,32,2,.671,Command exited with non-zero status 66
+15880,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,2,32,2,.703,Command exited with non-zero status 66
+15800,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,4,32,2,.723,Command exited with non-zero status 66
+18592,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,4,32,2,.696,Command exited with non-zero status 66
+18572,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,4,32,2,.678,Command exited with non-zero status 66
+18728,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,4,32,2,.682,Command exited with non-zero status 66
+18768,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,4,32,2,.689,Command exited with non-zero status 66
+18588,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,8,32,9,.677,Command exited with non-zero status 66
+21320,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,8,32,8,.706,Command exited with non-zero status 66
+19796,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,8,32,8,.675,Command exited with non-zero status 66
+19928,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,8,32,8,.709,Command exited with non-zero status 66
+19732,0,0
+tsan-clang,100,"DRB100-task-reference-orig-no.cpp",false,8,32,9,.711,Command exited with non-zero status 66
+21508,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,2,32,2,.686,Command exited with non-zero status 66
+15956,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,2,32,2,.671,Command exited with non-zero status 66
+15820,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,2,32,2,.698,Command exited with non-zero status 66
+15800,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,2,32,2,.675,Command exited with non-zero status 66
+15844,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,2,32,2,.698,Command exited with non-zero status 66
+15832,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,4,32,2,.688,Command exited with non-zero status 66
+18624,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,4,32,2,.669,Command exited with non-zero status 66
+18584,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,4,32,2,.687,Command exited with non-zero status 66
+18588,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,4,32,2,.684,Command exited with non-zero status 66
+18592,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,4,32,2,.702,Command exited with non-zero status 66
+18628,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,8,32,9,.703,Command exited with non-zero status 66
+21464,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,8,32,9,.724,Command exited with non-zero status 66
+21340,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,8,32,8,.662,Command exited with non-zero status 66
+19844,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,8,32,8,.712,Command exited with non-zero status 66
+19884,0,0
+tsan-clang,101,"DRB101-task-value-orig-no.cpp",false,8,32,9,.668,Command exited with non-zero status 66
+21464,0,0
